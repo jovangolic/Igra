@@ -1,0 +1,15 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Connect Four - Home</title>
+</head>
+<body>
+    <h1>Welcome to Connect Four</h1>
+    <p th:text="${message}"></p>
+    <form action="/startGame" method="get">
+        <button type="submit">Start Game</button>
+    </form>
+</body>
+</html>

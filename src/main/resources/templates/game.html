@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Connect Four - Game</title>
+</head>
+<body>
+    <h1>Connect Four</h1>
+    <p th:text="${message}"></p>
+
+    <!-- Tabela za prikaz stanja igre -->
+    <table border="1">
+        <tr th:each="row : ${gameState}">
+            <td th:each="cell : ${row}" th:text="${cell == 0 ? '.' : (cell == 1 ? 'X' : 'O')}"></td>
+        </tr>
+    </table>
+
+    <!-- Forma za odabir poteza -->
+    <form action="/makeMove" method="post">
+        <label for="column">Choose column:</label>
+        <input type="number" id="column" name="column" min="0" max="6">
+        <button type="submit">Make Move</button>
+    </form>
+
+    <form action="/startGame" method="get">
+        <button type="submit">Restart Game</button>
+    </form>
+</body>
+</html>
