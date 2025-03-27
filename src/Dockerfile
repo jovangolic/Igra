@@ -1,10 +1,13 @@
-# Use an official OpenJDK image
+# Use an official OpenJDK image for building the app
 FROM openjdk:17-jdk-slim AS build
 
 WORKDIR /app
 
-# Copy all files into the container
+# Copy all files to the container
 COPY . .
+
+# Make mvnw executable
+RUN chmod +x mvnw
 
 # Build the application using Maven (skip tests for speed)
 RUN ./mvnw clean package -DskipTests
