@@ -2,6 +2,9 @@
 
 Connect Four je klasična igrica napravljena koristeći **Spring Boot** sa **MVC arhitekturom** i **Thymeleaf** kao templating engine za frontend. Igra omogućava dva igrača da se smenjuju u postavljanju diskova u kolone na mreži 6x7 i cilj je da prvi postavi četiri diska u nizu (horizontalno, vertikalno ili dijagonalno).
 
+# Note
+Application may take up to a minute to load on first visit due to Render's free hosting cold start
+
 ## Funkcionalnosti
 
 - **Pokretanje igre**: Omogućava korisnicima da započnu igru i postavljaju diskove.
